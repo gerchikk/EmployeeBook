@@ -5,12 +5,11 @@ public class Employee {
     private int id;
     private static int counter = 1;
 
-    public Employee (String fullName, String department, int salary, int id) {
+    public Employee (String fullName, String department, int salary) {
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
-        this.id = getCounter();
-        counter++;
+        id = counter++;
     }
 
     public String getFullName() {
@@ -41,13 +40,25 @@ public class Employee {
     }
 
     public String toString () {
-        return "ФИО - " + this.fullName + "\n Отдел - " + this.department + "\n Зарплата - " + this.salary + "\n id - " + this.id;
+        return "ФИО - " + this.fullName + "\nОтдел - " + this.department + "\nЗарплата - " + this.salary + "\nid - " + this.id;
+    }
+
+    public void sumSalary () {
+        int sumSalary = 0;
+        for (int id : Employee[]) {
+            sumSalary += salary;
+        return sumSalary();
+        }
     }
 
 
 
-
-
-
-
 }
+
+
+
+
+
+
+
+
