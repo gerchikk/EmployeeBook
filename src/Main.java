@@ -4,20 +4,21 @@ public class Main {
         System.out.println("________________________________");
     }
     public static void main(String[] args) {
-        Employee[] employee = new Employee[10];
-        employee [0] = new Employee("Петров Иван Федорович", "1", 78960);
-        employee [1] = new Employee("Сидоров Алексей Павлович", "2", 68920);
-        employee [2] = new Employee("Компотов Петр Александрович", "3", 89650);
-        employee [3] = new Employee("Капустин Сергей Фиолентович", "4", 74250);
-        employee [4] = new Employee("Пирогов Аркадий Леонидович", "5", 83650);
-        employee [5] = new Employee("Пирогов Аркадий Леонидович", "5", 83650);
-        employee [6] = new Employee("Пирогов Аркадий Леонидович", "5", 83650);
-        employee [7] = new Employee("Пирогов Аркадий Леонидович", "5", 83650);
-        employee [8] = new Employee("Пирогов Аркадий Леонидович", "5", 83650);
-        employee [9] = new Employee("Пирогов Аркадий Леонидович", "5", 83650);
+        Employee[] employees = new Employee[10];
+        employees [0] = new Employee("Петров Иван Федорович", "1", 78960.0);
+        employees [1] = new Employee("Сидоров Алексей Павлович", "2", 68920.0);
+        employees [2] = new Employee("Компотов Петр Александрович", "3", 89650.0);
+        employees [3] = new Employee("Капустин Сергей Фиолентович", "4", 74250.0);
+        employees [4] = new Employee("Антонов Анатолий Иванович", "5", 83650.0);
+        employees [5] = new Employee("Горшнев Роберт Кадимович", "1", 68520.0);
+        employees [6] = new Employee("Толстоноженко Александр Леонидович", "2", 93260.0);
+        employees [7] = new Employee("Медведев Дмитрий Анатольевич", "3", 83650.0);
+        employees [8] = new Employee("Сухорукова Елена Дмитриевна", "4", 106250.0);
+        employees [9] = new Employee("Уканеева Венера Гиндулловна", "5", 85500.0);
         separation();
-        System.out.println(employee [9]);
-        System.out.println(employee.sumSalary());
+        System.out.println(employees);
+        System.out.println("Сумма затрат на зарпалты в месяц - " + employees.sumSalary() + " рублей)");
+
 
 
     }
