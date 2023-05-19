@@ -3,6 +3,35 @@ public class Main {
     public static  void separation () {
         System.out.println("________________________________");
     }
+
+    // Посчитать сумму затрат на зарплаты в месяц.
+
+    public static double sumSalary (Employee [] employees) {
+        double sum = 0.0;
+        for (Employee e : employees) {
+            if (e != null) sum += e.getSalary();
+        }
+        return sum;
+
+    }
+
+
+
+    // Найти сотрудника с минимальной зарплатой.
+    public static void minSalary () {
+
+    }
+
+
+    // Найти сотрудника с максимальной зарплатой.
+
+
+    // Подсчитать среднее значение зарплат.
+
+
+    //Получить Ф. И. О. всех сотрудников (вывести в консоль).
+
+
     public static void main(String[] args) {
         Employee[] employees = new Employee[10];
         employees [0] = new Employee("Петров Иван Федорович", "1", 78960.0);
@@ -16,8 +45,13 @@ public class Main {
         employees [8] = new Employee("Сухорукова Елена Дмитриевна", "4", 106250.0);
         employees [9] = new Employee("Уканеева Венера Гиндулловна", "5", 85500.0);
         separation();
-        System.out.println(employees);
-        System.out.println("Сумма затрат на зарпалты в месяц - " + employees.sumSalary() + " рублей)");
+        for (int i = 0; i < employees.length; i++) {
+            System.out.println(employees[i]);
+            separation();
+        }
+        System.out.println("Сумма затрат на зарпалты в месяц - " + sumSalary(employees) + " рублей)");
+        separation();
+
 
 
 

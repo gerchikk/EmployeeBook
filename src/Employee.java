@@ -13,18 +13,6 @@ public class Employee {
         id = counter++;
     }
 
-    private Employee[] employees;
-
-    private int maxEmployees;
-
-    public void EmployeeList (int maxEmployees) {
-        employees = new Employee[maxEmployees];
-        this.maxEmployees = maxEmployees;
-    }
-
-
-
-
     public String getFullName() {
         return this.fullName;
     }
@@ -54,29 +42,8 @@ public class Employee {
 
     // Получить список всех сотрудников со всеми имеющимися по ним данными (вывести в консоль значения всех полей (toString)).
     public String toString () {
-            return "ФИО - " + this.fullName + "\nОтдел - " + this.department + "\nЗарплата - " + this.salary + "\nid - " + this.id;
+        return "ФИО - " + this.fullName + "\nОтдел - " + this.department + "\nЗарплата - " + this.salary + "\nid - " + this.id;
     }
-
-    // Посчитать сумму затрат на зарплаты в месяц.
-
-    public void sumSalary () {
-        double sumSalary = 0.0;
-        for (Employee e : employees) {
-            if (e != null) sumSalary += e.getSalary();
-        }
-
-    }
-
-    // Найти сотрудника с минимальной зарплатой.
-
-
-    // Найти сотрудника с максимальной зарплатой.
-
-
-    // Подсчитать среднее значение зарплат.
-
-
-    //Получить Ф. И. О. всех сотрудников (вывести в консоль).
 
 
 
