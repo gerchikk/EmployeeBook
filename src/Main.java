@@ -18,15 +18,28 @@ public class Main {
 
 
     // Найти сотрудника с минимальной зарплатой.
-    public static void minSalary () {
-
+    public static double minSalary (Employee [] employees) {
+        double min = employees[0].getSalary();
+        for (int i = 0; i < employees.length; i++) {
+            if ( employees[i].getSalary() < min) {
+                min = employees[i].getSalary();
+            }
+        }
+        return min;
     }
 
-
     // Найти сотрудника с максимальной зарплатой.
-
-
+    public static double maxSalary (Employee [] employees) {
+        double max = employees[0].getSalary();
+        for (int i = 0; i < employees.length; i++) {
+            if ( employees[i].getSalary() > max) {
+                max = employees[i].getSalary();
+            }
+        }
+        return max;
+    }
     // Подсчитать среднее значение зарплат.
+
 
 
     //Получить Ф. И. О. всех сотрудников (вывести в консоль).
@@ -50,6 +63,10 @@ public class Main {
             separation();
         }
         System.out.println("Сумма затрат на зарпалты в месяц - " + sumSalary(employees) + " рублей)");
+        separation();
+        System.out.println("Минимальная зарплата - " + minSalary(employees) + " рублей");
+        separation();
+        System.out.println("Максимальная зарплата - " + maxSalary(employees) + " рублей");
         separation();
 
 
