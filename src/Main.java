@@ -5,23 +5,20 @@ public class Main {
     }
 
     // Посчитать сумму затрат на зарплаты в месяц.
-
     public static double sumSalary (Employee [] employees) {
         double sum = 0.0;
-        for (Employee e : employees) {
-            if (e != null) sum += e.getSalary();
+        for (int i = 0; i < employees.length; i++) {
+                sum += employees[i].getSalary();
         }
         return sum;
 
     }
 
-
-
     // Найти сотрудника с минимальной зарплатой.
     public static double minSalary (Employee [] employees) {
         double min = employees[0].getSalary();
         for (int i = 0; i < employees.length; i++) {
-            if ( employees[i].getSalary() < min) {
+            if (employees[i].getSalary() < min) {
                 min = employees[i].getSalary();
             }
         }
@@ -32,18 +29,33 @@ public class Main {
     public static double maxSalary (Employee [] employees) {
         double max = employees[0].getSalary();
         for (int i = 0; i < employees.length; i++) {
-            if ( employees[i].getSalary() > max) {
+            if (employees[i].getSalary() > max) {
                 max = employees[i].getSalary();
             }
         }
         return max;
     }
+
     // Подсчитать среднее значение зарплат.
-
-
+    public static double middleSalary (Employee [] employees) {
+        double sum = 0.0;
+        for (int i = 0; i < employees.length; i++) {
+                sum += employees[i].getSalary();
+        }
+        double middleSalary = sum/employees.length;
+        return middleSalary;
+    }
 
     //Получить Ф. И. О. всех сотрудников (вывести в консоль).
-
+    public static String devireFullName (Employee [] employees) {
+        int i = 0;
+        String fullName = employees[i].getFullName();
+        while (i < employees.length) {
+            System.out.println("ФИО сотрудника - " + employees[i].getFullName());
+            i++;
+        }
+        return fullName;
+    }
 
     public static void main(String[] args) {
         Employee[] employees = new Employee[10];
@@ -62,15 +74,15 @@ public class Main {
             System.out.println(employees[i]);
             separation();
         }
-        System.out.println("Сумма затрат на зарпалты в месяц - " + sumSalary(employees) + " рублей)");
+        System.out.println("Сумма затрат на зарпалты в месяц - " + sumSalary(employees) + " рублей");
         separation();
         System.out.println("Минимальная зарплата - " + minSalary(employees) + " рублей");
         separation();
         System.out.println("Максимальная зарплата - " + maxSalary(employees) + " рублей");
         separation();
-
-
-
-
+        System.out.println("Среднее значение зарплат за месяц составляет - " + middleSalary(employees) + " рублей");
+        separation();
+        System.out.println(devireFullName(employees));
+        separation();
     }
 }
