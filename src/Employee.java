@@ -1,5 +1,4 @@
 public class Employee {
-
     private String fullName;
     private String department;
     private double salary;
@@ -44,9 +43,6 @@ public class Employee {
     public String toString () {
         return "ФИО - " + this.fullName + "\nОтдел - " + this.department + "\nЗарплата - " + this.salary + "\nid - " + this.id;
     }
-
-
-
 }
 
 

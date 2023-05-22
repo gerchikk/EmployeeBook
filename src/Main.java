@@ -11,7 +11,6 @@ public class Main {
                 sum += employees[i].getSalary();
         }
         return sum;
-
     }
 
     // Найти сотрудника с минимальной зарплатой.
