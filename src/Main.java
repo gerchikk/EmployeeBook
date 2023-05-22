@@ -46,14 +46,12 @@ public class Main {
     }
 
     //Получить Ф. И. О. всех сотрудников (вывести в консоль).
-    public static String devireFullName (Employee [] employees) {
+    public static void devireFullName (Employee [] employees) {
         int i = 0;
-        String fullName = employees[i].getFullName();
         while (i < employees.length) {
             System.out.println("ФИО сотрудника - " + employees[i].getFullName());
             i++;
         }
-        return fullName;
     }
 
     public static void main(String[] args) {
@@ -81,7 +79,7 @@ public class Main {
         separation();
         System.out.println("Среднее значение зарплат за месяц составляет - " + middleSalary(employees) + " рублей");
         separation();
-        System.out.println(devireFullName(employees));
+        devireFullName(employees);
         separation();
     }
 }
