@@ -39,10 +39,10 @@ public class Employee {
         this.salary = salary;
     }
 
-    // Получить список всех сотрудников со всеми имеющимися по ним данными (вывести в консоль значения всех полей (toString)).
     public String toString () {
         return "ФИО - " + this.fullName + "\nОтдел - " + this.department + "\nЗарплата - " + this.salary + "\nid - " + this.id;
     }
+
 }
 
 
