@@ -75,45 +75,41 @@ public class EmployeeBook {
         }
     }
 
-    public String sumSalary () {
+    public double sumSalary () {
         double sum = 0.0;
         for (int i = 0; i < employees.length; i++) {
             sum += employees[i].getSalary();
         }
-        String message = "Сумма затрат на зарпалты в месяц - " + sum + " рублей";
-        return message;
+        return sum;
     }
 
-    public String minSalary () {
+    public double minSalary () {
         double min = employees[0].getSalary();
         for (int i = 0; i < employees.length; i++) {
             if (employees[i].getSalary() < min) {
                 min = employees[i].getSalary();
             }
         }
-        String message = "Минимальная зарплата - " + min + " рублей";
-        return message;
+        return min;
     }
 
-    public String maxSalary () {
+    public double maxSalary () {
         double max = employees[0].getSalary();
         for (int i = 0; i < employees.length; i++) {
             if (employees[i].getSalary() > max) {
                 max = employees[i].getSalary();
             }
         }
-        String message = "Максимальная зарплата - " + max + " рублей";
-        return message;
+        return max;
     }
 
-    public String middleSalary () {
+    public double middleSalary () {
         double sum = 0.0;
         for (int i = 0; i < employees.length; i++) {
             sum += employees[i].getSalary();
         }
         double middleSalary = sum/employees.length;
-        String message = "Среднее значение зарплат за месяц составляет - " + middleSalary + " рублей";
-        return message;
+        return sum;
     }
 
     public void devireFullName () {
@@ -133,7 +129,7 @@ public class EmployeeBook {
         }
     }
 
-    public String minSalaryInDepartment (String department) {
+    public double minSalaryInDepartment (String department) {
         double min = Double.MAX_VALUE;
         Employee poorEmployee = null;
         for (int i = 0; i < employees.length; i++) {
@@ -143,7 +139,7 @@ public class EmployeeBook {
             }
         }
         String message = "Сотрудник с самой маленькой зарплатой в отделе " + department + " - \n" + poorEmployee;
-        return message;
+        return min;
     }
 
     public String maxSalaryInDepartment (String department) {
