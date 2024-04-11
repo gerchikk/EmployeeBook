@@ -1,3 +1,5 @@
+package employees;
+
 public class EmployeeBook {
     private final Employee[] employees;
     private final int capacity;
@@ -11,7 +13,8 @@ public class EmployeeBook {
     public void separation () {
         System.out.println("________________________________");
     }
-    
+
+    //Добавить сотрудника
     public void addEmployee(String fullName, String department, double salary) {
         if (count < capacity) {
             for (int i = 0; i < capacity; i++) {
@@ -26,6 +29,7 @@ public class EmployeeBook {
         }
     }
 
+    //Удалить сотрудника по ФИО
     public void deleteEmployee(String fullName) {
         for (int i = 0; i < capacity; i++) {
             if (employees[i] != null && employees[i].getFullName().equals(fullName)) {
@@ -35,6 +39,7 @@ public class EmployeeBook {
         }
     }
 
+    //Удалить сотрудника по ФИО и id
     public void deleteEmployee(String fullName, int id) {
         for (int i = 0; i < capacity; i++) {
             if (employees[i] != null && employees[i].getFullName().equals(fullName) && employees[i].getId() == id) {
@@ -43,6 +48,7 @@ public class EmployeeBook {
         }
     }
 
+    //Изменить запрлату сотрудника
     public void changeSalary(String fullName, double salary) {
         for (int i = 0; i < capacity; i++) {
             if (employees[i] != null && employees[i].getFullName().equals(fullName)) {
@@ -51,6 +57,7 @@ public class EmployeeBook {
         }
     }
 
+    //Изменить отдел сотрудника по ФИО
     public void changeDepartment(String fullName, String newDepartment) {
         for (int i = 0; i < capacity; i++) {
             if (employees[i] != null && employees[i].getFullName().equals(fullName)) {
@@ -59,6 +66,7 @@ public class EmployeeBook {
         }
     }
 
+    //Изменить отдел сотрудника по id
     public void changeDepartment(int id, String newDepartment) {
         for (int i = 0; i < capacity; i++) {
             if (employees[i] != null && employees[i].getId() == id) {

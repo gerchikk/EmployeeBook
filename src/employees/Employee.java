@@ -1,3 +1,5 @@
+package employees;
+
 public class Employee {
     private String fullName;
     private String department;
