@@ -1,27 +1,28 @@
 package employees.dao;
 
 import employees.Employee;
+import employees.enums.Departments;
 
 public interface CRUD {
-    void addEmployee(String fullName, String department, double salary);
+    void addEmployee(Employee employee);
 
-    void deleteEmployee(String fullName);
-
-    void deleteEmployee(String fullName, int id);
+    void deleteEmployee(int id);
 
     void changeSalary(String fullName, double salary);
 
-    void changeDepartment(String fullName, String newDepartment);
+    void changeDepartment(String fullName, Departments newDepartment);
 
-    void changeDepartment(int id, String newDepartment);
-
-    void changeDepartment(String fullName, int id, String newDepartment);
+    void changeDepartment(int id, Departments newDepartment);
 
     void indexSalary(double indexationCoefficient);
 
-    void indexSalaryInDepartment(String department, double index);
+    void indexSalaryInDepartment(Departments department, double index);
 
     Employee findById(int id);
+
+    Employee findByFullName(String fullName);
+
+    Employee findBySalary(double salary);
 
 
 }

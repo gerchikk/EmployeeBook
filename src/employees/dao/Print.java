@@ -1,11 +1,15 @@
 package employees.dao;
 
 import employees.Employee;
+import employees.enums.Departments;
 
 public interface Print {
     void devireFullName();
-    void printEmployeeDepartment(String department);
-    void printInfoEmployee(Employee employees)
+    void printEmployeeDepartment(Departments department);
+
+    void printInfoEmployee(String fullName);
+
+    void printAllEmployees();
 
 
 
