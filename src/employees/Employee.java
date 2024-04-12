@@ -1,23 +1,31 @@
+package employees;
+
+import employees.enums.Departments;
+
 public class Employee {
     private String fullName;
-    private String department;
+    private Departments department;
     private double salary;
     private int id;
     private static int counter = 1;
 
-    public Employee (String fullName, String department, double salary) {
+    public Employee() {
+
+    }
+
+    public Employee(String fullName, Departments department, double salary) {
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
-        id = counter++;
+        this.id = counter++;
     }
 
     public String getFullName() {
         return this.fullName;
     }
 
-    public String getDepartment() {
-        return this.department;
+    public Departments getDepartment() {
+        return department;
     }
 
     public double getSalary() {
@@ -27,16 +35,13 @@ public class Employee {
     public int getId() {
         return this.id;
     }
-    public int getCounter() {
-        return counter;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
 
     public void setSalary (double salary) {
         this.salary = salary;
+    }
+
+    public void setDepartment(Departments department) {
+        this.department = department;
     }
 
     public String toString () {
